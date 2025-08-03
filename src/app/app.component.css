@@ -1,0 +1,57 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.logo {
+  color: white;
+  padding: 20px;
+  margin-left: 50px;
+}
+
+.action-buttons {
+
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background: transparent;
+  border: 0;
+  color: white;
+  margin-right: 50px;
+}
+
+#login-button{
+  background-color: #fd5965;
+  border-radius: 150px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.toolbar {
+  position: fixed;
+  background: transparent;
+}
+
+.buttons {
+  padding: 12px;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.2);
+  /* dark overlay */
+  backdrop-filter: blur(6px);
+  /* glassy blur */
+  -webkit-backdrop-filter: blur(6px);
+  color: white;
+}
+
+
+.nav-buttons {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 13pt;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 0;
+  background: transparent;
+}
+
+.nav-buttons:hover {
+
+}
