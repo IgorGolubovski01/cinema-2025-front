@@ -19,7 +19,7 @@
 }
 
 #login-button{
-  background-color: #fd5965;
+  background-color: #f84565;
   border-radius: 150px;
   padding-left: 40px;
   padding-right: 40px;
@@ -28,12 +28,14 @@
 .toolbar {
   position: fixed;
   background: transparent;
+  z-index: 2;
 }
 
 .buttons {
   padding: 12px;
   border-radius: 50px;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(255,255, 255, 0.05);
+
   /* dark overlay */
   backdrop-filter: blur(6px);
   /* glassy blur */
@@ -52,6 +54,7 @@
   background: transparent;
 }
 
+/* todo */
 .nav-buttons:hover {
 
 }

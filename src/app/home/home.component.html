@@ -1,68 +1,45 @@
-<div class="home-wrapper"></div>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.dd</p>
+<div class="home-wrapper">
+    <div class="background"></div>
+    <div class="promo">
+        <img src="/assets/marvelLogo.svg"><br>
+        <b>
+            <p>Guardians</p>
+            <p>of the Galaxy</p>
+        </b>
+
+
+        <p class="promoInfo">{{promoMovie?.genre?.genreName}} | <i class="fa-regular fa-calendar"></i>
+            {{promoMovie?.filmDateTime}} | <i class="fa-regular fa-clock"></i> {{promoMovie?.duration}}</p>
+        <p class="promoInfo">{{promoMovie?.description}}</p>
+        <p><button id="explore-button" (click)="scrollToShowing()"><b>Explore Movies <i class="fa-solid fa-arrow-right"></i></b></button></p>
+
+    </div>
+</div>
+
+
+<div class="content">
+
+    <div class="showing-wrapper">
+        <p id="showing">Now Showing</p>
+        <div class="card-display">
+            <div *ngFor="let m of movies"  class="card-wrapper">
+                <mat-card class="example-card" appearance="outlined" >
+
+                    <img class="mat-card-img" src="https://material.angular.dev/assets/img/examples/shiba2.jpg"
+                        alt="Photo of a Shiba Inu">
+
+                    <mat-card-content>
+                        <p>{{m.title}}</p>
+                        <p id="p-content">{{m.genre.genreName}} • {{m.filmDateTime}} • {{m.duration}}</p>
+                    </mat-card-content>
+
+                    <mat-card-actions>
+                        <button class="buy-ticket-button"><b>Buy Tickets</b></button>
+                    </mat-card-actions>
+
+                </mat-card>
+
+            </div>
+        </div>
+    </div>
+</div>
