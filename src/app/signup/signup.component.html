@@ -5,22 +5,22 @@
     <h2>Sign Up</h2>
     <form>
       <label for="fName">First name</label>
-      <input id="fName" type="text" placeholder="Enter your first name" />
+      <input id="fName" type="text" placeholder="Enter your first name" [(ngModel)]="fistName" />
 
       <label for="lName">Last name</label>
-      <input id="lName" type="text" placeholder="Enter your last name" />
+      <input id="lName" type="text" placeholder="Enter your last name" [(ngModel)]="lastName" />
 
       <label for="email">Email</label>
-      <input id="email" type="email" placeholder="Enter your email" />
+      <input id="email" type="email" placeholder="Enter your email" [(ngModel)]="email" />
 
       <label for="phone">Phone number</label>
-      <input id="phone" type="tel" placeholder="Enter your phone number" />
+      <input id="phone" type="tel" placeholder="Enter your phone number" [(ngModel)]="phone" />
 
       <label for="password">Password</label>
-      <input id="password" type="password" placeholder="Enter your password" />
+      <input id="password" type="password" placeholder="Enter your password" [(ngModel)]="password" />
 
       <label for="repassword">Confirm password</label>
-      <input id="repassword" type="password" placeholder="Confirm your password" />
+      <input id="repassword" type="password" placeholder="Confirm your password" [(ngModel)]="rePassword" />
 
       <div class="buttons">
         <button routerLink="/signup" type="button" class="signup-btn">Sign Up</button>
