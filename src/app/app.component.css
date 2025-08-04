@@ -54,7 +54,23 @@
   background: transparent;
 }
 
-/* todo */
-.nav-buttons:hover {
 
+.nav-buttons:hover {
+  background: rgba(255, 255, 255, 0.15);        /* translucent white */
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);                   /* glass blur */
+  -webkit-backdrop-filter: blur(8px);           /* for Safari */
+  border-radius: 30px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  color: white;
+} 
+
+#login-button:hover {
+  background: rgba(248, 69, 101, 0.25); /* translucent pink */
+  box-shadow: 0 0 15px 5px rgba(248, 69, 101, 0.6);
+  animation: pulseGlow 1.5s infinite alternate;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
+
