@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-  height: 120vh;
+  height: 130vh;
   width: 99vw;
   overflow: hidden;
   display: flex;
@@ -24,11 +24,12 @@
 }
 
 .login-form-container {
+  margin-top: 80px;
   background: rgba(84, 24, 35, 0.15);
   padding: 30px 40px;
   border-radius: 15px;
   width: 320px;
-  max-height: 90vh;      /* limit height to viewport */
+  max-height: 100vh;      /* limit height to viewport */
   box-shadow: 0 8px 30px rgba(248, 69, 101, 0.3);
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

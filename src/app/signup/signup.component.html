@@ -5,7 +5,7 @@
     <h2>Sign Up</h2>
     <form>
       <label for="fName">First name</label>
-      <input id="fName" name="firstName" type="text" placeholder="Enter your first name" [(ngModel)]="fistName" />
+      <input id="fName" name="firstName" type="text" placeholder="Enter your first name" [(ngModel)]="firstName" />
 
       <label for="lName">Last name</label>
       <input id="lName" name="lastName" type="text" placeholder="Enter your last name" [(ngModel)]="lastName" />
@@ -24,14 +24,13 @@
 
 
       <label for="password">Password</label>
-      <input id="password" name="password" type="password" placeholder="Enter your password" [(ngModel)]="password" />
+      <input id="password" name="password" type="password" placeholder="Enter your password"  autocomplete="new-password" [(ngModel)]="password" />
 
       <label for="repassword">Confirm password</label>
-      <input id="repassword" name="rePassword" type="password" placeholder="Confirm your password"
-        [(ngModel)]="rePassword" />
+      <input id="repassword" name="rePassword" type="password" placeholder="Confirm your password" autocomplete="new-password" [(ngModel)]="rePassword" />
 
       <div class="buttons">
-        <button type="button" class="signup-btn">Sign Up</button>
+        <button type="button" class="signup-btn" (click)="doSignup()">Sign Up</button>
       </div>
     </form>
   </div>

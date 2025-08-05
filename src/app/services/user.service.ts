@@ -11,6 +11,6 @@ const client = axios.create({
 export class UserService{
 
     static async signUp(userModel: UserModel){
-        return client.post('signUp')
+        return client.post('/signUp', userModel)
     }
 }
