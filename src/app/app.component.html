@@ -1,23 +1,25 @@
 <div class="app-wrapper">
   <mat-toolbar class="toolbar">
 
-    <div class="logo">Movie App</div>
-
-
-    <span class="example-spacer"></span>
-
-    <div class="buttons">
-      <button routerLink="/home" class="nav-buttons"(click)="scrollToTop()"> Home </button>
-      <button routerLink="/home" class="nav-buttons" (click)="scrollToShowing()"> Movies </button>
-      <button routerLink="/home" class="nav-buttons"> Theatres </button>
-      <button routerLink="/home" class="nav-buttons"> Releases </button>
+    <!-- LEFT SECTION -->
+    <div class="toolbar-left">
+      <div class="logo">Movie App</div>
     </div>
 
-    <span class="example-spacer"></span>
+    <!-- CENTER SECTION -->
+    <div class="toolbar-center">
+      <div class="buttons">
+        <button routerLink="/home" class="nav-buttons" (click)="scrollToTop()">Home</button>
+        <button routerLink="/home" class="nav-buttons" (click)="scrollToShowing()">Movies</button>
+        <button routerLink="/home" class="nav-buttons">Theatres</button>
+        <button routerLink="/home" class="nav-buttons">Releases</button>
+      </div>
+    </div>
 
-    <div class="action">
-      <button class="action-buttons"> Search </button>
-      <button routerLink="/login" class="action-buttons" id="login-button"> Login </button>
+    <!-- RIGHT SECTION -->
+    <div class="toolbar-right">
+      <button class="action-buttons">Search</button>
+      <button routerLink="/login" class="action-buttons" id="login-button">Login</button>
     </div>
 
   </mat-toolbar>

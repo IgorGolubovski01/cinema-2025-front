@@ -1,13 +1,14 @@
 import { RoleModel } from "./role.model";
 
-export interface UserModel{
-    id: number,
-    address: string,
-    email: string,
+export interface UserModel {
     firstName: string,
     lastName: string,
-    password: string,
+
+    email: string,
     phone: string,
+    address: string,
+
     username: string,
-    role: RoleModel
+    password: string,
+
 }

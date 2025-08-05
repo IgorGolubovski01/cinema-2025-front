@@ -5,25 +5,33 @@
     <h2>Sign Up</h2>
     <form>
       <label for="fName">First name</label>
-      <input id="fName" type="text" placeholder="Enter your first name" [(ngModel)]="fistName" />
+      <input id="fName" name="firstName" type="text" placeholder="Enter your first name" [(ngModel)]="fistName" />
 
       <label for="lName">Last name</label>
-      <input id="lName" type="text" placeholder="Enter your last name" [(ngModel)]="lastName" />
+      <input id="lName" name="lastName" type="text" placeholder="Enter your last name" [(ngModel)]="lastName" />
+
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" placeholder="Enter your username" [(ngModel)]="username" />
 
       <label for="email">Email</label>
-      <input id="email" type="email" placeholder="Enter your email" [(ngModel)]="email" />
+      <input id="email" name="email" type="email" placeholder="Enter your email" [(ngModel)]="email" />
 
       <label for="phone">Phone number</label>
-      <input id="phone" type="tel" placeholder="Enter your phone number" [(ngModel)]="phone" />
+      <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" [(ngModel)]="phone" />
+
+      <label for="address">Address</label>
+      <input id="address" name="address" type="text" placeholder="Enter your address" [(ngModel)]="address" />
+
 
       <label for="password">Password</label>
-      <input id="password" type="password" placeholder="Enter your password" [(ngModel)]="password" />
+      <input id="password" name="password" type="password" placeholder="Enter your password" [(ngModel)]="password" />
 
       <label for="repassword">Confirm password</label>
-      <input id="repassword" type="password" placeholder="Confirm your password" [(ngModel)]="rePassword" />
+      <input id="repassword" name="rePassword" type="password" placeholder="Confirm your password"
+        [(ngModel)]="rePassword" />
 
       <div class="buttons">
-        <button routerLink="/signup" type="button" class="signup-btn">Sign Up</button>
+        <button type="button" class="signup-btn">Sign Up</button>
       </div>
     </form>
   </div>

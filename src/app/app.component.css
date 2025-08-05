@@ -1,48 +1,47 @@
-.example-spacer {
-  flex: 1 1 auto;
+/* === GENERAL STRUCTURE === */
+.toolbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
 }
 
+/* Sections (left, center, right) */
+.toolbar-left,
+.toolbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+/* === LOGO === */
 .logo {
   color: white;
   padding: 20px;
-  margin-left: 50px;
+  margin-left: 10px;
 }
 
-.action-buttons {
-
-  padding-bottom: 10px;
-  padding-top: 10px;
-  background: transparent;
-  border: 0;
-  color: white;
-  margin-right: 50px;
-}
-
-#login-button{
-  background-color: #f84565;
-  border-radius: 150px;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-.toolbar {
-  position: fixed;
-  background: transparent;
-  z-index: 2;
-}
-
+/* === NAV BUTTONS (CENTER) === */
 .buttons {
   padding: 12px;
   border-radius: 50px;
-  background: rgba(255,255, 255, 0.05);
-
-  /* dark overlay */
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(6px);
-  /* glassy blur */
   -webkit-backdrop-filter: blur(6px);
   color: white;
 }
-
 
 .nav-buttons {
   padding-left: 20px;
@@ -54,20 +53,36 @@
   background: transparent;
 }
 
-
 .nav-buttons:hover {
-  background: rgba(255, 255, 255, 0.15);        /* translucent white */
+  background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(8px);                   /* glass blur */
-  -webkit-backdrop-filter: blur(8px);           /* for Safari */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 30px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   color: white;
-} 
+}
+
+/* === ACTION BUTTONS (RIGHT) === */
+.action-buttons {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background: transparent;
+  border: 0;
+  color: white;
+  margin-right: 10px;
+}
+
+#login-button {
+  background-color: #f84565;
+  border-radius: 150px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
 
 #login-button:hover {
-  background: rgba(248, 69, 101, 0.25); /* translucent pink */
+  background: rgba(248, 69, 101, 0.25);
   box-shadow: 0 0 15px 5px rgba(248, 69, 101, 0.6);
   animation: pulseGlow 1.5s infinite alternate;
   backdrop-filter: blur(6px);
