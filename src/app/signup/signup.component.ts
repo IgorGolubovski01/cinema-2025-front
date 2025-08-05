@@ -29,9 +29,6 @@ export class SignupComponent {
       alert('Passwords do not match.');
       return;
     }
-
-    
-
     const userModel: UserModel = {
       firstName: this.firstName,
       lastName: this.lastName,
@@ -41,7 +38,6 @@ export class SignupComponent {
       username: this.username,
       password: this.password,
     };
-
     UserService.signUp(userModel)
   }
 }

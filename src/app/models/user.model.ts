@@ -1,4 +1,3 @@
-import { RoleModel } from "./role.model";
 
 export interface UserModel {
     firstName: string,

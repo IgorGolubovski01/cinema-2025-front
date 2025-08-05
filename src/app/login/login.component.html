@@ -4,15 +4,15 @@
   <div class="login-form-container">
     <h2>Login</h2>
     <form>
-      <label for="email">Email</label>
-      <input id="email" type="email" placeholder="Enter your email" />
+      <label for="username">Username</label>
+      <input id="username" type="text" placeholder="Enter your username" />
 
       <label for="password">Password</label>
       <input id="password" type="password" placeholder="Enter your password" autocomplete="new-password"/>
 
       <div class="buttons">
-        <button type="submit" class="login-btn">Login</button>
-        <button routerLink="/signup" type="button" class="signup-btn">Sign Up</button>
+        <button class="login-btn" (click)="doLogin()">Login</button>
+        <button class="signup-btn" routerLink="/signup">Sign Up</button>
       </div>
     </form>
   </div>
