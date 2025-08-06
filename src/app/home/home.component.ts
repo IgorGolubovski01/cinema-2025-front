@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { MovieService } from '../services/movie.service';
 import { MovieModel } from '../models/movie.model';
 import { AxiosError } from 'axios';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 import { NgFor } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-home',
-  imports: [NgFor, MatCardModule],
+  imports: [NgFor, MatCardModule, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -28,6 +28,7 @@ export class HomeComponent {
       .then(rsp => {
         this.promoMovie = rsp.data
       }).catch((e: AxiosError) => this.error = `${e.code}: ${e.message}`)
+
 
   }
 

@@ -39,5 +39,7 @@ export class AppComponent {
   doLogout(){
     localStorage.removeItem('active')
     this.router.navigate(['home'])
+    alert('Logged out')
   }
+
 }

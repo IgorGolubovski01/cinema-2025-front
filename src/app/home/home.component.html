@@ -17,7 +17,7 @@
 </div>
 
 
-<div class="content">
+    <div class="content">
 
     <div class="showing-wrapper">
         <p id="showing">Now Showing</p>
@@ -34,7 +34,7 @@
                     </mat-card-content>
 
                     <mat-card-actions>
-                        <button class="buy-ticket-button"><b>Buy Tickets</b></button>
+                        <button type="button" class="buy-ticket-button" [routerLink]="['/buy-ticket/', m.id]"><b>Buy Tickets</b></button>
                     </mat-card-actions>
 
                 </mat-card>

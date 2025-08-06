@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <div class="background"></div>
+
+    <div class="movie-card">
+  <div class="movie-poster">
+    <img src="assets/poster/Guardians of the Galaxy.jpg" [alt]="movie!.title" />
+  </div>
+  <div class="movie-info">
+    <div>
+      <div class="language">English</div>
+      <h2>{{ movie!.title}}</h2>
+      <div class="rating">Directed by:  {{ movie!.director }}</div>
+      <div class="description">{{ movie!.description }}</div>
+      <div class="details">Duration: {{ movie!.duration }}</div>
+      <div class="details">Date & Time: {{ movie!.filmDateTime }} </div>
+      <div class="details">Price: {{ movie!.price }}$</div>
+    </div>
+    <div class="buttons">
+      <button class="btn trailer">▶ Watch Trailer</button>
+      <button class="btn buy">Buy Tickets</button>
+      <button class="btn favorite">♡</button>
+    </div>
+  </div>
+</div>
+
+</div>

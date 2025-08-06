@@ -16,4 +16,10 @@ export class MovieService{
     static async getPromoMovie(){
         return client.get('getPromoMovie')
     }
+
+    static async getMovieById(id: number){
+        return client.get(`/getMovieById/${id}`)
+    }
+
+
 }

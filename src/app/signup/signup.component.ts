@@ -3,6 +3,7 @@ import { Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { UserModel } from '../models/user.model';
 import { UserService } from '../services/user.service';
+import { LoginModel } from '../models/login.model';
 
 @Component({
   selector: 'app-signup',
@@ -38,8 +39,26 @@ export class SignupComponent {
       username: this.username,
       password: this.password,
     };
+
     UserService.signUp(userModel)
+      .then(response => {
+        const loginModel: LoginModel = {
+          username: userModel.username,
+          password: userModel.password
+        }
+        UserService.login(loginModel)
+          .then(success => {
+            if(success){
+              alert("Registration successful")
+              this.router.navigate(['/home'])
+            }else{
+              alert("Failed")
+            }
+          })
+      })
+
+
   }
 
-  
+
 }

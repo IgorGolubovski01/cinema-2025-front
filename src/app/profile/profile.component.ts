@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UserService } from '../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -8,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
 
+  private userService = UserService
+
+  constructor(private router: Router){
+    if(!this.userService.checkActive()){
+      router.navigate(['/login'])
+    }
+  }
 }

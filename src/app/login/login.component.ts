@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { LoginModel } from '../models/login.model';
 import { UserService } from '../services/user.service';
 
@@ -12,23 +12,23 @@ import { UserService } from '../services/user.service';
 })
 export class LoginComponent {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   username: string = ''
   password: string = ''
 
 
   async doLogin() {
-
-    console.log(this.username);
-    console.log(this.password);
     
     const loginModel: LoginModel = {
       username: this.username,
       password: this.password
     }
-    if(await UserService.login(loginModel) == true)
-      alert('logged in')    
+    if(await UserService.login(loginModel) == true){
+      alert('logged in')   
+      this.router.navigate(['/home'])
+
+    }
     
     if(await UserService.login(loginModel) == false)
       alert('failed')
