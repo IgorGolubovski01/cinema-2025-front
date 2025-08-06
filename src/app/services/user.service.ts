@@ -4,19 +4,37 @@ import { LoginModel } from "../models/login.model";
 
 const client = axios.create({
     baseURL: 'http://localhost:8080/user',
-    headers:{
-        'Accept' : 'application/json'
+    headers: {
+        'Accept': 'application/json'
     }
 })
 
-export class UserService{
+export class UserService {
 
-    static async signUp(userModel: UserModel){
+    static async signUp(userModel: UserModel) {
         return client.post('/signUp', userModel)
     }
 
-    static async login(loginModel: LoginModel){
-        return client.post('/login', loginModel)
+    static async login(loginModel: LoginModel): Promise<boolean> {
+        try {
+            const response = await client.post('/login', loginModel)
+            const user = response.data
+            localStorage.setItem('active', JSON.stringify(user))
+            return true
+        } catch (error: any) {
+            return false;
+        }
+
     }
-    
+
+    static checkActive(): any {
+        const active = localStorage.getItem('active')
+
+        if(!active){
+            return null
+        }   
+
+        return true
+    }
+
 }

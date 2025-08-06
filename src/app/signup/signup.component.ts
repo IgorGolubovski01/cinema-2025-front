@@ -40,4 +40,6 @@ export class SignupComponent {
     };
     UserService.signUp(userModel)
   }
+
+  
 }

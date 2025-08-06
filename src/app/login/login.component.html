@@ -5,10 +5,10 @@
     <h2>Login</h2>
     <form>
       <label for="username">Username</label>
-      <input id="username" type="text" placeholder="Enter your username" />
+      <input id="username" name="username" type="text" placeholder="Enter your username" [(ngModel)]="username" />
 
       <label for="password">Password</label>
-      <input id="password" type="password" placeholder="Enter your password" autocomplete="new-password"/>
+      <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="new-password" [(ngModel)]="password" />
 
       <div class="buttons">
         <button class="login-btn" (click)="doLogin()">Login</button>
