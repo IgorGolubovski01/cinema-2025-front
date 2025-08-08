@@ -74,16 +74,11 @@
   font-size: 11pt;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s, box-shadow 0.3s;
+  transition: background 0.2s, box-shadow 0.3s;
 }
 
-/* Hover effect (matches home Explore button) */
 .login-btn:hover,
 .signup-btn:hover {
   background: rgba(248, 69, 101, 0.25);
-  box-shadow: 0 0 15px 5px rgba(74, 20, 30, 0.6);
-  animation: pulseGlow 1.5s infinite alternate;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
 }
 

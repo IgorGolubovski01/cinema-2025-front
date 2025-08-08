@@ -32,9 +32,7 @@
 
 .promo p {
   margin: 0;
-  /* removes default top and bottom spacing */
   line-height: 1.0;
-  /* optional: controls spacing between lines */
 }
 
 #explore-button {
@@ -112,7 +110,7 @@ mat-card-content {
 #p-content {
   font-size: 10pt;
   color: #99a1af;
-  line-height: 0.1 ;
+  line-height: 0.1;
 }
 
 .card-display {
@@ -129,10 +127,11 @@ mat-card-content {
 }
 
 #explore-button:hover {
-  background: rgba(248, 69, 101, 0.25); /* translucent pink */
+  background: rgba(248, 69, 101, 0.25);
   box-shadow: 0 0 15px 5px rgba(248, 69, 101, 0.6);
   animation: pulseGlow 1.5s infinite alternate;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
 }
 
+.buy-ticket-button:hover {
+  background: rgba(248, 69, 101, 0.25);
+}
