@@ -18,7 +18,6 @@
 
     <!-- RIGHT SECTION -->
     <div class="toolbar-right">
-      <button class="action-buttons">Search</button>
       <button routerLink="/login" class="action-buttons" id="login-button" *ngIf="!userService.checkActive()">Login</button>
       <button routerLink="/profile" class="action-buttons" id="profile-button" *ngIf="userService.checkActive()">Profile</button>
       <button routerLink="/home"  class="action-buttons" id="login-button" *ngIf="userService.checkActive()" (click)="doLogout()">Logout</button>

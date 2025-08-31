@@ -11,6 +11,12 @@ const client = axios.create({
 
 export class UserService {
 
+    static async getUserById(userId: number){
+        return client.get('getUserById', {
+            params: { userId }
+        })
+    }
+
     static async signUp(userModel: UserModel) {
         return client.post('/signUp', userModel)
     }
@@ -25,6 +31,10 @@ export class UserService {
             return false;
         }
 
+    }
+
+    static async editProfile(userModel: UserModel){
+        return client.post('/editProfile', userModel)
     }
 
     static checkActive(): any {

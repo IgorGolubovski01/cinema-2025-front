@@ -1,4 +1,80 @@
 <div class="wrapper">
     <div class="background"></div>
 
+    <!-- Sidebar Dashboard -->
+    <aside class="dashboard">
+        <img src="assets/profile.png" />
+        <h2>{{ name }}</h2>
+        <button class="dashboard-btn" routerLink="/edit-profile">Edit Profile</button>
+        <button class="dashboard-btn">My Orders</button>
+        <button class="dashboard-btn">Favorites</button>
+        <button class="dashboard-btn">Settings</button> 
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Filters -->
+        <div class="filters">
+            <mat-form-field appearance="outline">
+                <mat-label>Search by title</mat-label>
+                <input matInput [(ngModel)]="filterValue" (keyup)="applyFilter()" placeholder="Movie title" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Filter by status</mat-label>
+                <mat-select [(ngModel)]="statusFilter" (selectionChange)="applyFilter()">
+                    <mat-option value="">All</mat-option>
+                    <mat-option value="IN_CART">In Cart</mat-option>
+                    <mat-option value="PURCHASED">Purchased</mat-option>
+                    <mat-option value="WATCHED">Watched</mat-option>
+                    <mat-option value="CANCELLED">Cancelled</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <!-- Orders Table -->
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef>Movie</th>
+                <td mat-cell *matCellDef="let element">{{ element.title }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="filmDateTime">
+                <th mat-header-cell *matHeaderCellDef>Projection date</th>
+                <td mat-cell *matCellDef="let element">{{ element.filmDateTime }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="quantity">
+                <th mat-header-cell *matHeaderCellDef>Tickets</th>
+                <td mat-cell *matCellDef="let element">{{ element.quantity }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="totalPrice">
+                <th mat-header-cell *matHeaderCellDef>Total Price</th>
+                <td mat-cell *matCellDef="let element">{{ element.totalPrice }}$</td>
+            </ng-container>
+
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef>Status</th>
+                <td mat-cell *matCellDef="let element">
+                    {{ formatStatus(element.status.statusName) }}
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef>Action</th>
+                <td mat-cell *matCellDef="let element">
+                    <button class="action-button" *ngIf="element.status.statusName === 'IN_CART'" (click)="doPurchase(element.id)">Purchase</button>
+                    <button class="action-button"
+                        *ngIf="element.status.statusName === 'IN_CART' || element.status.statusName === 'PURCHASED'" (click)="doCancel(element.id)">Cancel</button>
+                    <button class="action-button" *ngIf="element.status.statusName === 'WATCHED'">Rate</button>
+                    <button class="action-button" *ngIf="element.status.statusName === 'WATCHED'" (click)="dontShow(element.id)"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="action-button" *ngIf="element.status.statusName === 'CANCELLED'" (click)="dontShow(element.id)"><i class="fa-solid fa-trash-can"></i></button>
+                </td>   
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+    </main>
 </div>

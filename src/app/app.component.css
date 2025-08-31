@@ -88,3 +88,23 @@
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
+
+#profile-button {
+  background: rgba(255, 255, 255, 0.05); /* frosted base */
+  color: white;
+  border: none;
+  padding: 10px 40px;          /* match Login/Logout button */
+  font-size: 13pt;             /* same as nav-buttons, adjust if needed */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 150px;        /* same as Login button */
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+#profile-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transform: scale(1.05);
+}

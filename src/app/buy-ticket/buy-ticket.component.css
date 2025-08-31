@@ -39,6 +39,7 @@
 }
 
 .movie-info {
+  margin-top: 50px;
   padding: 32px;
   display: flex;
   flex-direction: column;
@@ -131,6 +132,7 @@
 }
 
 .movie-poster{
+  margin-top: 100px;
   width:250px;
   height:450px;
   margin-right: 50px;

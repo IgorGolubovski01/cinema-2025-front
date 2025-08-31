@@ -14,6 +14,12 @@
         <div class="details">Duration: {{ movie?.duration }}</div>
         <div class="details">Date & Time: {{ movie?.filmDateTime }} </div>
         <div class="details">Price: {{ movie?.price }}$</div>
+        <div class="details">
+  <div>Actors:</div>
+  <ul>
+    <li *ngFor="let actor of movie?.actors">{{ actor.actorName }}</li>
+  </ul>
+</div>
       </div>
       <div class="buttons-with-info">
         <div class="buttons">

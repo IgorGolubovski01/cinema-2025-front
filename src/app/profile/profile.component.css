@@ -1,15 +1,24 @@
+
 .wrapper {
   position: relative;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 30px;
+  color: white;
+  margin-top: 70px;
+  overflow-y: auto;
+  max-height: calc(100vh - 70px);
 }
 
 .background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -19,4 +28,101 @@
   background-position: center;
   filter: brightness(50%);
   z-index: -1;
+}
+
+.dashboard {
+  margin-top: 70px;
+  width: 200px;
+  background-color: rgba(127, 127, 127, 0.085);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-right: 1px solid rgb(58, 48, 48);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard h2 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 300;
+  color: rgb(135, 133, 133);
+}
+
+.dashboard-btn {
+  background: transparent;
+  border: 1px solid rgb(58, 48, 48);
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 12pt;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dashboard-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 8px 0 rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+  color: white;
+}
+
+
+
+
+
+img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.mat-column-filmDateTime,
+.mat-column-quantity,
+.mat-column-totalPrice,
+.mat-column-action {
+  text-align: center;
+}
+
+table {
+  background-color: transparent;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+th,
+td {
+  color: white;
+  margin: 10px;
+  font-weight: 100;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+mat-form-field {
+  flex: 1;
+}
+
+.action-button {
+  background-color: #f84565;
+  color: white;
+  border-radius: 150px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 0;
+  margin-left: 6px;
+}
+
+.action-button:hover {
+  background: rgba(248, 69, 101, 0.25);
 }
