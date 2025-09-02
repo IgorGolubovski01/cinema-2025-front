@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
-  imports: [NgFor, NgIf, MatCardModule, RouterLink, FormsModule],
+  imports: [NgFor, MatCardModule, RouterLink, FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -59,6 +59,11 @@ export class HomeComponent {
     if (this.page + 1 < this.totalPages) {
       this.page++;
       this.loadMovies();
+
+      window.scrollTo({
+        top: this.page * window.innerHeight,
+        behavior: 'smooth'
+      });
     }
   }
 

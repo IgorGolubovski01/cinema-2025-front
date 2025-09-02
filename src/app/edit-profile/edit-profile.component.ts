@@ -30,7 +30,7 @@ export class EditProfileComponent {
 
   constructor(private router: Router) {
     const active = localStorage.getItem("active")
-    if(!active){
+    if (!active) {
       this.router.navigate(['/login']);
       return;
     }
@@ -68,12 +68,13 @@ export class EditProfileComponent {
         address: this.address,
         password: this.password
       }
+
       UserService.editProfile(userModel)
       alert("Profile info updated.")
+      
     }
-
-
   }
+
 
 }
 

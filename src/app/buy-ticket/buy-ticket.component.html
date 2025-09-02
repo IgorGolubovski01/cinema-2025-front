@@ -3,7 +3,7 @@
 
   <div class="movie-card">
     <div class="movie-poster">
-      <img src="assets/poster/Guardians of the Galaxy.jpg" [alt]="movie?.title" />
+      <img [src]="'/assets/poster/' + (movie?.title || 'default') + '.jpg'" [alt]="movie?.title || 'No title'">
     </div>
     <div class="movie-info">
       <div>

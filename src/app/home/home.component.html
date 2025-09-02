@@ -43,8 +43,7 @@
     <div class="card-display">
       <div *ngFor="let m of filteredMovies" class="card-wrapper">
         <mat-card class="example-card" appearance="outlined">
-          <img class="mat-card-img" src="https://material.angular.dev/assets/img/examples/shiba2.jpg"
-               alt="Photo of a Shiba Inu">
+          <img class="mat-card-img" [src]="'/assets/landscape/' + m.title + '.jpg'" [alt]="m.title">
 
           <mat-card-content>
             <p>{{m.title}}</p>
